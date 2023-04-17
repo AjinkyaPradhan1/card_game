@@ -1,0 +1,141 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#Suresh{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 45%;
+    height: 100%;
+}
+
+#Ramesh{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 45%;
+    height: 100%;
+}
+/*heading of cards*/
+#Suresh_content{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: orangered;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+#Ramesh_content{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: orangered;
+    align-items: center;
+    justify-content: center;
+}
+/*cards div*/
+.Suresh_cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+    background-color: black;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+#Ramesh_cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+    background-color: black;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+#SPADE-THREE,#DIAMOND-FIVE,#CLUB-QUEEN{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 50%;
+    background-color: black;
+}
+
+#SPADE-JACK,#DIAMOND-KING,#HEART-QUEEN{
+    display: flex;
+    width: 30%;
+    height: 50%;
+    background-color: black;
+}
+.spade_queen{
+    width: 100%;
+    height: 100%;
+}
+
+/*cards scenario of flipping*/
+  .scene {
+    display: inline-block;
+    width: 200px;
+    height: 260px;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+  }
+  
+  .card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  
+ 
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+  }
+  
+  .card__face--front {
+    background: transparent;
+  }
+  
+  .card__face--back {
+    transform: rotateY(180deg);
+  }
